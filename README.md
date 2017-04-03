@@ -54,15 +54,38 @@ Note: In order for the coupon to be automatically applied, you must create a pro
 
 ## Installation
 
-Add to `Gemfile`:
-```ruby
-gem 'spree_related_products', github: 'spree-contrib/spree_related_products', branch: 'master'
-```
+1. Add this extension to your Gemfile with this line:
 
-Run:
-```sh
-$ bundle && bundle exec rails g spree_related_products:install
-```
+  #### Spree >= 3.1
+
+  ```ruby
+  gem 'spree_related_products', github: 'spree-contrib/spree_related_products'
+  ```
+
+  #### Spree 3.0 and Spree 2.x
+
+  ```ruby
+  gem 'spree_related_products', github: 'spree-contrib/spree_related_products', branch: 'X-X-stable'
+  ```
+
+  The `branch` option is important: it must match the version of Spree you're using.
+  For example, use `3-0-stable` if you're using Spree `3-0-stable` or any `3.0.x` version.
+
+2. Install the gem using Bundler:
+  ```ruby
+  bundle install
+  ```
+
+3. Copy & run migrations
+  ```ruby
+  bundle exec rails g spree_related_products:install
+  ```
+
+4. Restart your server
+
+  If your server was running, restart it so that it can find the assets properly.
+
+
 ---
 
 ## Contributing
