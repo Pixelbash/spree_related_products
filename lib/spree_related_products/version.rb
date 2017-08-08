@@ -11,7 +11,7 @@ module SpreeRelatedProducts
     MAJOR = 3
     MINOR = 2
     TINY  = 0
-    PRE   = 'alpha'.freeze
+    PRE   = 1
 
     STRING = [MAJOR, MINOR, TINY, PRE].compact.join('.')
   end
